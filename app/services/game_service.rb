@@ -12,7 +12,15 @@ class GameService
   end
 
   def result
-    @choice == @computer_choice
+    if (@choice == 'rock' && @computer_choice == 'scissors') ||
+      (@choice == 'scissors' && @computer_choice == 'paper') ||
+      (@choice == 'paper' && @computer_choice == 'rock')
+      "You won! Curb with #{@computer_choice} loses."
+    elsif @choice == @computer_choice
+      "Draw! Curb also chose #{computer_choice}."
+    else
+      "You lost! Curb with #{@computer_choice} wins."
+    end
   end
 
   private

@@ -1,5 +1,5 @@
 class ChoiceService
-  CHOICES = ['rock', 'paper', 'scissor']
+  CHOICES = ['rock', 'paper', 'scissors']
 
   def self.choices
     CHOICES

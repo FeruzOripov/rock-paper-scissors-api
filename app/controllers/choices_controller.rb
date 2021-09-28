@@ -1,10 +1,10 @@
 class ChoicesController < ApplicationController
   rescue_from ::Exceptions::InvalidChoice do |e|
-    render json: 'invalid choice', status: 400
+    render json: 'invalid choice, visit /choices to get list of choices', status: 400
   end
 
   rescue_from ActionController::ParameterMissing do |e|
-    render json: 'choice is missing or the value is empty', status: 400
+    render json: 'choice is missing or the value is empty, visit /choices to get list of choices', status: 400
   end
 
   def index
@@ -12,7 +12,7 @@ class ChoicesController < ApplicationController
   end
 
   def result
-    render json: GameService.new(choices_params).result, status: :ok
+    render json: game_result, status: :ok
   end
 
   private
@@ -23,5 +23,9 @@ class ChoicesController < ApplicationController
 
   def choices_params
     params.require(:choice)
+  end
+
+  def game_result
+    GameService.new(choices_params).result
   end
 end
