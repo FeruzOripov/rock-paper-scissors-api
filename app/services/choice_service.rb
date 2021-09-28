@@ -1,5 +1,5 @@
 class ChoiceService
-  CHOICES = ['rock', 'paper', 'scissors']
+  CHOICES = %w(rock paper scissors).freeze
 
   def self.choices
     CHOICES

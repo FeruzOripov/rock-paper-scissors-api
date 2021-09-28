@@ -1,9 +1,9 @@
 class ChoicesController < ApplicationController
-  rescue_from ::Exceptions::InvalidChoice do |e|
+  rescue_from ::Exceptions::InvalidChoice do |_e|
     render json: 'invalid choice, visit /choices to get list of choices', status: 400
   end
 
-  rescue_from ActionController::ParameterMissing do |e|
+  rescue_from ActionController::ParameterMissing do |_e|
     render json: 'choice is missing or the value is empty, visit /choices to get list of choices', status: 400
   end
 

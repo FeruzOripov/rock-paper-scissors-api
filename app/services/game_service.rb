@@ -8,13 +8,13 @@ class GameService
 
   def initialize(choice)
     @choice = check_choice(choice)
-    @computer_choice ||= get_computer_choice
+    @computer_choice ||= computer_result
   end
 
   def result
     if (@choice == 'rock' && @computer_choice == 'scissors') ||
-      (@choice == 'scissors' && @computer_choice == 'paper') ||
-      (@choice == 'paper' && @computer_choice == 'rock')
+       (@choice == 'scissors' && @computer_choice == 'paper') ||
+       (@choice == 'paper' && @computer_choice == 'rock')
       "You won! Curb with #{@computer_choice} loses."
     elsif @choice == @computer_choice
       "Draw! Curb also chose #{computer_choice}."
@@ -25,7 +25,7 @@ class GameService
 
   private
 
-  def get_result_from_api
+  def result_from_api
     response = Net::HTTP.get_response(URL)
     if response.code == '500'
       raise ::Exceptions::ServerError
@@ -34,12 +34,10 @@ class GameService
     end
   end
 
-  def get_computer_choice
-    begin
-      get_result_from_api
-    rescue ::Exceptions::ServerError
-      ChoiceService.random_choice
-    end
+  def computer_result
+    result_from_api
+  rescue ::Exceptions::ServerError
+    ChoiceService.random_choice
   end
 
   def check_choice(choice)
