@@ -1,0 +1,47 @@
+current directory: /Users/feruz/exadel-interview-project/rock-paper-scissors-api/vendor/ruby/2.3.0/gems/ffi-1.15.4/ext/ffi_c
+/Users/feruz/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20210928-12076-w0e1hf.rb extconf.rb
+checking for ffi_prep_closure_loc() in -lffi... yes
+checking for ffi_prep_cif_var()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for whether -pthread is accepted as LDFLAGS... yes
+creating extconf.h
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /Users/feruz/exadel-interview-project/rock-paper-scissors-api/vendor/ruby/2.3.0/extensions/x86_64-darwin-19/2.3.0-static/ffi-1.15.4/mkmf.log
+
+current directory: /Users/feruz/exadel-interview-project/rock-paper-scissors-api/vendor/ruby/2.3.0/gems/ffi-1.15.4/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /Users/feruz/exadel-interview-project/rock-paper-scissors-api/vendor/ruby/2.3.0/gems/ffi-1.15.4/ext/ffi_c
+make "DESTDIR="
+compiling Thread.c
+compiling Buffer.c
+compiling DynamicLibrary.c
+compiling Variadic.c
+compiling ffi.c
+compiling Pointer.c
+compiling MemoryPointer.c
+compiling Platform.c
+compiling LongDouble.c
+compiling Function.c
+compiling MappedType.c
+compiling Type.c
+compiling Types.c
+compiling StructLayout.c
+compiling ArrayType.c
+compiling LastError.c
+compiling Struct.c
+compiling Call.c
+compiling MethodHandle.c
+compiling AbstractMemory.c
+compiling FunctionInfo.c
+compiling ClosurePool.c
+compiling StructByValue.c
+linking shared-object ffi_c.bundle
+
+current directory: /Users/feruz/exadel-interview-project/rock-paper-scissors-api/vendor/ruby/2.3.0/gems/ffi-1.15.4/ext/ffi_c
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20210928-12076-7fdxr6
