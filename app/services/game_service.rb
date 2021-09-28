@@ -17,7 +17,7 @@ class GameService
        (@choice == 'paper' && @computer_choice == 'rock')
       "You won! Curb with #{@computer_choice} loses."
     elsif @choice == @computer_choice
-      "Draw! Curb also chose #{computer_choice}."
+      "Draw! Curb also chose #{@computer_choice}."
     else
       "You lost! Curb with #{@computer_choice} wins."
     end
