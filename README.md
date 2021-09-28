@@ -19,3 +19,10 @@ This application uses Rails version 5.2.6, Ruby version 2.3.5.
 * If you win you will get a message which says: `You won! Curb with {curb_choice} loses.`
 * If you lose you will get a message which says: `You lost! Curb with {curb_choice} wins.`
 * If draw: `Draw! Curb also chose {curb_choice}.`
+
+## Rules
+---
+* Rock beats scissors
+* Scissors beats paper
+* Paper beats rock
+* Identical throws tie (rock == rock, etc.)
