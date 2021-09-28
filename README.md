@@ -14,8 +14,8 @@ This application uses Rails version 5.2.6, Ruby version 2.3.5.
 
 ## How to play
 ---
-To get list of possible choices: `curl localhost:3000/choices`
-To play the game: `curl -X GET -d choice={your_choice} localhost:3000/get-result`
-If you win you will get a message which says: `You won! Curb with {curb_choice} loses.`
-If you loose you will get a message which says: `You lost! Curb with {curb_choice} wins.`
-If draw: `Draw! Curb also chose {curb_choice}.`
+* To get list of possible choices: `curl localhost:3000/choices`
+* To play the game: `curl -X GET -d choice={your_choice} localhost:3000/get-result`
+* If you win you will get a message which says: `You won! Curb with {curb_choice} loses.`
+* If you loose you will get a message which says: `You lost! Curb with {curb_choice} wins.`
+* If draw: `Draw! Curb also chose {curb_choice}.`
