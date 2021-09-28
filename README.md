@@ -1,24 +1,21 @@
-# README
+# Rock-Paper-Scissors API
+---
+API that allows a user to play rock-paper-scissors.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+---
+This application uses Rails version 5.2.6, Ruby version 2.3.5.
 
-Things you may want to cover:
+## Local setup
+---
+* Install Ruby version 2.3.5: `rvm install 2.3.5`
+* Bundle: `bundle install`
+* Run server: `rails server`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## How to play
+---
+To get list of possible choices: `curl localhost:3000/choices`
+To play the game: `curl -X GET -d choice={your_choice} localhost:3000/get-result`
+If you win you will get a message which says: `You won! Curb with {curb_choice} loses.`
+If you loose you will get a message which says: `You lost! Curb with {curb_choice} wins.`
+If draw: `Draw! Curb also chose {curb_choice}.`
