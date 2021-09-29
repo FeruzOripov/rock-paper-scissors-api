@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Choices API', type: :request do
-  let(:choices) { ['rock', 'paper', 'scissors'] }
+  let(:choices) { %w(rock paper scissors) }
 
   describe 'GET /choices' do
     before { get '/choices' }

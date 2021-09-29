@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ChoiceService do
-  let(:choices) { ['rock', 'paper', 'scissors'] }
+  let(:choices) { %w(rock paper scissors) }
 
   describe '#choices' do
     it 'returns list of choices' do
