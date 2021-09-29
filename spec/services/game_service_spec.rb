@@ -47,7 +47,7 @@ RSpec.describe GameService do
                              body: '{"body": "paper"}')
       end
 
-      it 'returns `You won!` message' do
+      it 'returns `You lost!` message' do
         expect(described_class.new('rock').result).to eq('You lost! Curb with paper wins.')
       end
     end
@@ -59,7 +59,7 @@ RSpec.describe GameService do
                              body: '{"body": "paper"}')
       end
 
-      it 'returns `You won!` message' do
+      it 'returns `Draw!` message' do
         expect(described_class.new('paper').result).to eq('Draw! Curb also chose paper.')
       end
     end
