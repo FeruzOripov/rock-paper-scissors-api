@@ -10,6 +10,7 @@ This application uses Rails version 5.2.6, Ruby version 2.3.5.
 ---
 * Install Ruby version 2.3.5: `rvm install 2.3.5`
 * Bundle: `bundle install`
+* Run specs: `bundle exec rspec`
 * Run server: `rails server`
 
 ## How to play
